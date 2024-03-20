@@ -19,21 +19,88 @@ Descripción: Este archivo CSS contiene los estilos para el sitio web X.
 */
 
 :root {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 html, body {
     margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header_logo {
-margin-top: 3em;
-margin-left: 3em;
+/*  
+ *** UNIDADES *** 
+ unidad em observa la configuración de su padre 
+ unidad rem observa la configuración del root o ansestro mas alejado */
+
+ /* propiedades del texto */
 text-decoration: none;
-font-size: 2em;
+font-size: 2rem;
+text-align: left;
+
+/* posicion del contenedor */
+position: absolute; /* indica que tomará como referencia al primer ancestro que tenga un position distinto de absolute */
+top: 3rem;
+left: 3rem;
+z-index: 1; /* profundidad funciona solo para position distintas a la static*/
 }
 
-.logo-color i {
-    color: brown;
+.logo-color a i {
+    color: rgb(218, 214, 214);
+}
+
+/* cuerpo */
+.banner {
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* ocultamos la barra horizontal de desplazamiento o scrollbar horizontal */
+}
+
+.banner_content{
+    /* propiedades de fuentes*/
+    text-align: center;
+    color: rgb(247, 237, 237); /*color hexadecimal 6 posiciones alfanumericas y dos ultimas como canal alpha*/
+
+    /* posicion del contenedor */
+    position: absolute;
+    top: 25vh;
+    left: 35vw;
+    z-index: 2;
+}
+
+.banner_content h1 {
+    font-size: 3rem;
+    /* word-break: normal; hace que la palbara se separe a medida que cambie el tamaño de la pantalla */
+}
+
+.banner_content h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.banner_button {
+    /* convertimos a elemento de bloque en linea */
+    display: inline-block;
+
+    /* propiedades del contenedor */
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255,0.3);
+    /* porpiedad del texto */
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 2rem;
+}
+
+.video_background {
+/* posicion de su contenedor */
+position: absolute;
+top: 0;
+left: 0;
+/* dimenciones del contenedor */
+width: 100vw;
+height: 100vh;
+
+object-fit: cover;
+
 }
