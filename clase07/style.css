@@ -1,0 +1,63 @@
+/* estilos generales */
+/* configuracion de variales */
+
+:root {
+    /* colores institucinales */
+    --primary-color: tomato;
+    --secondary-color:#fdede3;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    /*colores de fondo*/
+    --bg-color:#181419;
+    --bg-input-color:#2f1b352c;
+    /*fuente primaria*/
+    --primary-font: Arial, sans-serif;
+}
+
+/* etsilos generales */
+
+body, html {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 2vh 0;
+}
+
+/*   Crea un contenedor flexible: 
+  Al aplicar display: flex a un elemento padre, se convierte en un contenedor flexible 
+  que organiza a sus elementos hijos de manera flexible 
+  en una sola línea o en varias líneas según sea necesario. */
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    list-style-type: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  /* Pseudoclases es un selector que marca los elementos que están en un estado 
+  específico first-child: significa primer hijo */
+
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+
+  nav ul li:last-child {
+    margin-right: 2vw;
+  }
+
+  nav ul li a, nava {
+    display: block;
+  }
