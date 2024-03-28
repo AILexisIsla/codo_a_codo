@@ -1,0 +1,101 @@
+/* CSS 1: Intro a CSS --------------------------------------------------- */
+
+/* “:root”, es un selector especial
+ que se utiliza principalmente 
+ para definir variables personalizadas de CSS */
+
+ :root {
+    --primary-color:#9f3647;
+    --bg-color:#181419;
+        --secondary-color:#ffc098;
+        --third-color:#db4648;
+        --third-bis-color:#db4648f2;
+        --bg-input-color:#4f31572c;
+        --white-color: #fdf5ef;
+        /* fuentes */
+        --primary-font:'Nunito', sans-serif;
+ }
+
+ * {
+    padding: 0;
+    margin: 0;
+ }
+
+ a {
+    text-decoration: none;
+    color: var(--white-color)
+ }
+
+ h2 {
+    color: var(--white-color);
+    font-size: 2rem;
+ }
+
+ #logo {
+    font-weight: bold;
+ }
+
+ .search-title {
+    font-size: 4rem;
+ }
+
+ .movie-item-img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+ }
+
+ /* 
+Es una forma de asegurarse de que el contenido se ajuste y se muestre
+completamente sin distorsión, recortando partes 
+si excede las dimensiones del contenedor.
+*/
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+}
+
+#banner {
+    background-image: url(../img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+}
+
+/* 
+Repaso CSS 3 – PLAN DE ESTUDIOS: Modelo de caja y 
+posicionamiento. Modelo de caja y propiedades.
+Posicionamiento y visualización.  */
+
+/* Estilo al encabezado, agregar estilos por el selector de clase:
+color de fondo, color fuente, posición del 
+encabezado, ancho y z-index -------------------------------------------*/
+
+.header {
+     position: fixed; /*fijamos la cinnta de menues */
+     top:0;
+     left: 0;
+     width: 100%;
+     z-index: 999;
+}
+
+/* estilo a los botones */
+.btn-cac {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*posicionamos el contenedor de titulos*/
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.card-banner {
+    margin: 0 auto;
+    text-align: center;
+}
